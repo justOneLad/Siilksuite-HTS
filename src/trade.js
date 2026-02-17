@@ -552,7 +552,7 @@ async function snipeMode_activation(network, operatorId, operatorKey, baseToken,
   console.log(`Monitoring for pool: ${baseToken} ↔ ${swapToken}`);
   console.log('Timeout: 3 hours | Press Ctrl+C to stop\n');
 
-  const POLL_INTERVAL = 650; // 650ms
+  const POLL_INTERVAL = 850; // 850ms
   const MAX_SNIPE_TIME = 5 * 60 * 60 * 1000; // 5 hours in milliseconds
 
   initCache();
@@ -614,7 +614,7 @@ async function snipeMode_activation(network, operatorId, operatorKey, baseToken,
 
       // Wait before next check (unless we're stopping)
       if (SNIPER_STATE.isRunning) {
-        console.log(`⏱️ Next check in 650ms...\n`);
+        console.log(`⏱️ Next check in 850ms...\n`);
         await new Promise((r) => setTimeout(r, POLL_INTERVAL));
       }
     }
